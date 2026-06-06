@@ -1,0 +1,21 @@
+# ~/cobot3_ws/src/cobot3/config/camera_config.yaml
+# 카메라 외부 파라미터 (Extrinsic Parameters)
+# Isaac Sim Stage에서 카메라 프림 선택 후 Transform 패널 값을 입력
+# 카메라 위치 변경 시 이 파일만 수정하면 됨
+
+camera_tf:
+  # Isaac Sim Transform > Translate (미터 단위)
+  x: 0.0
+  y: -0.28857
+  z: 0.41062
+
+  # Isaac Sim Transform > Rotate (도 단위 - launch 파일에서 라디안 변환)
+  roll_deg:  40.0   # Isaac Sim Rotate X 값
+  pitch_deg:  0.0
+  yaw_deg:    0.0
+
+  # TF 프레임 이름
+  # child_frame 은 camera_frame (Isaac Sim 카메라 로컬)
+  # camera_frame → camera_color_optical_frame 보정은 launch 파일에서 처리
+  parent_frame: World
+  child_frame: camera_frame
