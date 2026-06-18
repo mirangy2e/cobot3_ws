@@ -24,8 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'nav_to_pose = mobility.nav_to_pose:main',
-            'nav_through_pose = mobility.nav_through_pose:main',
+            'nav_to_pose = commander.nav_to_pose:main',
+            'nav_through_pose = commander.nav_through_pose:main',
         ],
     },
 )

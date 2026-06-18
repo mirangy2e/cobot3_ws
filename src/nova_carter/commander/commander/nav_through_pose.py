@@ -61,14 +61,14 @@ def main():
     nav = BasicNavigator()
     
     # 1. 출발점 설정
-    init_pose = create_pose(nav, 0.002, -0.024, 0.0)
+    init_pose = create_pose(nav, -6.0, -1.0, 180.0)
     nav.setInitialPose(init_pose)
     nav.waitUntilNav2Active()
     
     # 2. 경유지(Waypoints) 리스트 생성
     waypoints = []
     
-    # 예시: 로봇이 'ㄷ'자 형태로 이동하도록 설정
+
     waypoints.append(create_pose(nav, 1.0, 0.0, 90.0))   # 경유지 1
     waypoints.append(create_pose(nav, 2.0, -1.0, 90.0))  # 경유지 2
     waypoints.append(create_pose(nav, 1.5, 1.0 , 90.0))  # 경유지 3 (최종 목적지)

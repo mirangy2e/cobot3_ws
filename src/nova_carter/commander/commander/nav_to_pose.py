@@ -88,12 +88,12 @@ def main():
     nav = BasicNavigator()
     
     # 1. 출발점 설정
-    init_pose = create_pose(nav, 0.002, -0.024, 180.0)
+    init_pose = create_pose(nav, -6.0, -1.0, 180.0)
     nav.setInitialPose(init_pose)
     nav.waitUntilNav2Active()
     
     # 2. 목표 지점 설정
-    goal_pose = create_pose(nav, 1.0, 1.0, 180.0)
+    goal_pose = create_pose(nav, -2.0, 2.0, 180.0)
         
     # 3. Task 실행
     nav.goToPose(goal_pose)
