@@ -1,0 +1,6 @@
+# tuna_demo — 대용량 데이터/결과/모델 제외
+/dataset/
+/results/
+/runs/
+/*.pt
+/*.ckpt

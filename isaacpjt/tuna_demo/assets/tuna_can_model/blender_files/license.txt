@@ -1,0 +1,11 @@
+Model Information:
+* title:	Canned tuna 참치 통조림 캔
+* source:	https://sketchfab.com/3d-models/canned-tuna-2ed30f8891a34bbaaa665e07ca2feff5
+* author:	k28792300 (https://sketchfab.com/k28792300)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Canned tuna 참치 통조림 캔" (https://sketchfab.com/3d-models/canned-tuna-2ed30f8891a34bbaaa665e07ca2feff5) by k28792300 (https://sketchfab.com/k28792300) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
