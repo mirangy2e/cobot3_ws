@@ -1,0 +1,311 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Acrylic_Clear_Glossy_A_Rough.png",
+            "source_hash": "16a00d8b7b954885b789ea3b1e35e9d2680b8209",
+            "target_url": "./SubUSDs/textures/T_Acrylic_Clear_Glossy_A_Rough.png",
+            "target_hash": "165378099d8ac579bb10f0b8043351dc4abb3d61"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Rough_Black_A_Normal.png",
+            "source_hash": "b564403e36f8ec8dfa4e410577af88537d2eaeaf",
+            "target_url": "./SubUSDs/textures/T_Plastic_Rough_Black_A_Normal.png",
+            "target_hash": "3baa9fd4f6e2a1e69c63a20a9dd5eb1e7e04b78e"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorBelt_A01_Trim_Albedo.png",
+            "source_hash": "3590591e2963dc5c9c3743a72b04876ae7f9a3a1",
+            "target_url": "./SubUSDs/textures/T_ConveyorBelt_A01_Trim_Albedo.png",
+            "target_hash": "d709ecf9df57c8e8d1bbad650a49e08a4cc86b47"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorBelt_A01_Trim_Normal.png",
+            "source_hash": "29dc414d655578a2f81d5126668a4a531777652e",
+            "target_url": "./SubUSDs/textures/T_ConveyorBelt_A01_Trim_Normal.png",
+            "target_hash": "fb832600d7cc5103d6d8da4d25996ea281db303e"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorBelt_A01_Trim_ORM.png",
+            "source_hash": "48e7b280d029079bdc059ff700987488053659b0",
+            "target_url": "./SubUSDs/textures/T_ConveyorBelt_A01_Trim_ORM.png",
+            "target_hash": "61a83975092abe263511a3a3d25843616416ef0a"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorsBelt_A01_Decal_Albedo.png",
+            "source_hash": "85d640a1cded20d1d701f68bbb1287cf1d796cd6",
+            "target_url": "./SubUSDs/textures/T_ConveyorsBelt_A01_Decal_Albedo.png",
+            "target_hash": "e5fd1ad4479c37221aca27f7fbd1b4e91cfd36c2"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorsBelt_A01_Decal_Alpha.png",
+            "source_hash": "c1b4af2c1ad444a602e880553b83d9e57ef58403",
+            "target_url": "./SubUSDs/textures/T_ConveyorsBelt_A01_Decal_Alpha.png",
+            "target_hash": "ab781e890d81b5d5ff2745c8669548043a8a9eaa"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Textures/T_ConveyorsBelt_A01_Decal_ORM.png",
+            "source_hash": "ddbafaf1cc8d0739b7cf76b1cd4af51a1b8623de",
+            "target_url": "./SubUSDs/textures/T_ConveyorsBelt_A01_Decal_ORM.png",
+            "target_hash": "e184719be98ee3c59604ec80e2b75d9098cd34a1"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Painted/T_MetalPainted_White_Glossy_A_Albedo.png",
+            "source_hash": "8ea91bc2d833a1fd67622984cf0b74c5f9946ce5",
+            "target_url": "./SubUSDs/textures/T_MetalPainted_White_Glossy_A_Albedo.png",
+            "target_hash": "c7462042d646567e296e4ae228701d08b9f8978b"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Painted/T_MetalPainted_White_Glossy_A_Normal.png",
+            "source_hash": "a208ba9d8132e5e06ec6c3dadb434b6666ac06ab",
+            "target_url": "./SubUSDs/textures/T_MetalPainted_White_Glossy_A_Normal.png",
+            "target_hash": "14f1fe994fb08527df880ccd155660a78fed8b96"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Painted/T_MetalPainted_White_Glossy_A_ORM.png",
+            "source_hash": "005ca29651075d29b3dd5f043c85dc18528f579c",
+            "target_url": "./SubUSDs/textures/T_MetalPainted_White_Glossy_A_ORM.png",
+            "target_hash": "796eacbfc9ba049fe3a7a2d0ce3aa9a4b28c2565"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Aluminium/Aluminium_Brushed_A.mdl",
+            "source_hash": "4af283959919d01111f6ae5b5bf568801d0f2da8",
+            "target_url": "./SubUSDs/materials/Aluminium_Brushed_A.mdl",
+            "target_hash": "6160c7bd9b82339440b6e3030575990ac8ebd732"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Misc/Metal_Glossy_A.mdl",
+            "source_hash": "64bb8356b501a210c27a813043c757b960198291",
+            "target_url": "./SubUSDs/materials/Metal_Glossy_A.mdl",
+            "target_hash": "bad0de5b00576a18be670072fb83e81d1cb031c0"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Steel/Steel_A.mdl",
+            "source_hash": "5134ad6051fa70d70dd79b5b3b5a903b4942cd2d",
+            "target_url": "./SubUSDs/materials/Steel_A.mdl",
+            "target_hash": "e190ca2d64c4fcc7019b6db113603000b446be87"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Misc/Plastic_Red_A.mdl",
+            "source_hash": "3b8a10154c66c7f03e6def63e897cfee36e8c663",
+            "target_url": "./SubUSDs/materials/Plastic_Red_A.mdl",
+            "target_hash": "4ed04db85dc53989b1212af7c30de5665c91b783"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Painted/MetalPainted_White_Glossy_A.mdl",
+            "source_hash": "86f88074d52d021dffa20457d88b8f63415a9263",
+            "target_url": "./SubUSDs/materials/MetalPainted_White_Glossy_A.mdl",
+            "target_hash": "c82f17cc61e91c8b7e7309e3ccb5162e9140b822"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Rubber/Generic/Rubber_Black_Rough_A.mdl",
+            "source_hash": "40c433ad756356a2aa14ed190b4006313a32614b",
+            "target_url": "./SubUSDs/materials/Rubber_Black_Rough_A.mdl",
+            "target_hash": "3be93c7432c95a979a926c21a3bd538060ac0c07"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Misc/Metal_Rough_A.mdl",
+            "source_hash": "93214fb9d1214e49153aef63c20c7d701a3bf227",
+            "target_url": "./SubUSDs/materials/Metal_Rough_A.mdl",
+            "target_hash": "278f352c9308ee679feac4eacc4afc696594e983"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Misc/Plastic_Blue_A.mdl",
+            "source_hash": "f0e355cfe592c6cebd830a9197c924c7ca4aa395",
+            "target_url": "./SubUSDs/materials/Plastic_Blue_A.mdl",
+            "target_hash": "b083e9343e33bcb81acfd4ff9e3bfa68cd8857df"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Misc/Plastic_Gray_A.mdl",
+            "source_hash": "9a0818ff449c2fd703ab8fe2c1c5c6abe6af5509",
+            "target_url": "./SubUSDs/materials/Plastic_Gray_A.mdl",
+            "target_hash": "3595c230911f9e2c28e4d718a930dc0f0fb5ddd9"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Misc/Plastic_Rough_Black_A.mdl",
+            "source_hash": "c67a4e99f594cf0399837d696cb0c444b8697371",
+            "target_url": "./SubUSDs/materials/Plastic_Rough_Black_A.mdl",
+            "target_hash": "949ba8fac6f3759ce594837879a285ce1006d762"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Misc/Plastic_Yellow_A.mdl",
+            "source_hash": "8b3af6595125398b72ec711d6581f2b45fc8a3cb",
+            "target_url": "./SubUSDs/materials/Plastic_Yellow_A.mdl",
+            "target_hash": "60e962db0ce0302d95dae203b04cc83d998c5f59"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Glossy_A_Albedo.png",
+            "source_hash": "aaa4bd9a9a65186043cde51706a9e21bbc0552a8",
+            "target_url": "./SubUSDs/textures/T_Metal_Glossy_A_Albedo.png",
+            "target_hash": "81307bccb693903511f018ce6350456a3f3c832e"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Glossy_A_Normal.png",
+            "source_hash": "4103de5e3b4b1dc621569811624bb39f913724cc",
+            "target_url": "./SubUSDs/textures/T_Metal_Glossy_A_Normal.png",
+            "target_hash": "c771b4a6413b5268d947e69afee15b7d9ead5695"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Glossy_A_ORM.png",
+            "source_hash": "1377b8ea88964f4d215db4ae5e9a2ed8a50c092e",
+            "target_url": "./SubUSDs/textures/T_Metal_Glossy_A_ORM.png",
+            "target_hash": "6fb4e883adc753bb2ac254b4b104d6a961fd17ab"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Blue_A_Albedo.png",
+            "source_hash": "2e94d0e175043335e160e190d3c15403c839ff39",
+            "target_url": "./SubUSDs/textures/T_Plastic_Blue_A_Albedo.png",
+            "target_hash": "f3d9611e06e975f1d4f1de95234fa64876dfd582"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Steel_A1_Albedo.png",
+            "source_hash": "e60d376f194a182e3c56575e4cfe224e64caa1c3",
+            "target_url": "./SubUSDs/textures/T_Steel_A1_Albedo.png",
+            "target_hash": "61913760306705a9d6487ce8a0c691129ac668ce"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Rubber/Textures/T_Rubber_Black_Rough_A_Albedo.png",
+            "source_hash": "1027d3efc4134e0aa9a2f6fa233e32f011cb3091",
+            "target_url": "./SubUSDs/textures/T_Rubber_Black_Rough_A_Albedo.png",
+            "target_hash": "0ec8a0ed66d9a35428b0c9e99ebd05ee092646c5"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Rough_A_Albedo.png",
+            "source_hash": "b45b4629921e3d850e027e8fcb342304eb89e8fd",
+            "target_url": "./SubUSDs/textures/T_Metal_Rough_A_Albedo.png",
+            "target_hash": "6cca0e62c8f3ad977c495042b8dd96aaaeeaa879"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Red_A_Albedo.png",
+            "source_hash": "352d6ad454e45b38c4a76ca740f1961dad9022f5",
+            "target_url": "./SubUSDs/textures/T_Plastic_Red_A_Albedo.png",
+            "target_hash": "81a2373dd8fcad7d56a47651c7f7876fb48d3dff"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Yellow_A_Albedo.png",
+            "source_hash": "e451d85d57b2ec753afc9660cc730244ccaf54a2",
+            "target_url": "./SubUSDs/textures/T_Plastic_Yellow_A_Albedo.png",
+            "target_hash": "d941e071e4229ae255bfe0389327a5933e72bee6"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Rough_Black_A_Albedo.png",
+            "source_hash": "dd6050c76510ac79ae2df7ec70988ab4ab6e8416",
+            "target_url": "./SubUSDs/textures/T_Plastic_Rough_Black_A_Albedo.png",
+            "target_hash": "ceecc2775fc055e836bc87a55ad0eb78a5962509"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Gray_A_Albedo.png",
+            "source_hash": "cfe84a6111f5095bd824e9e1094fb03e30f54cc6",
+            "target_url": "./SubUSDs/textures/T_Plastic_Gray_A_Albedo.png",
+            "target_hash": "e19812c718e7821aeda63ae1af488435b49b921c"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Blue_A_ORM.png",
+            "source_hash": "963edfd09a0af9c3115f2284edc75f01c172168c",
+            "target_url": "./SubUSDs/textures/T_Plastic_Blue_A_ORM.png",
+            "target_hash": "b28712457df3559dccfb4e6294e2429665c2d5e5"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Steel_A1_Normal.png",
+            "source_hash": "17330f6769d05f164c6e892a68c097006982ad0d",
+            "target_url": "./SubUSDs/textures/T_Steel_A1_Normal.png",
+            "target_hash": "45cbdc0215ac7481d7832fed9acc4bf0acace2f5"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Rubber/Textures/T_Rubber_Black_Rough_A_Normal.png",
+            "source_hash": "b06fb3d5cc0ee45be3c59345d70f9f00179235c0",
+            "target_url": "./SubUSDs/textures/T_Rubber_Black_Rough_A_Normal.png",
+            "target_hash": "94c0a755b5ad821de515cc7e24927e31793a63eb"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Rough_A_Normal.png",
+            "source_hash": "6356fecf7b4c35cea87b81c9a0a851075628624b",
+            "target_url": "./SubUSDs/textures/T_Metal_Rough_A_Normal.png",
+            "target_hash": "ec364c22d4c6b06aa4bacd7265e528e13a2a15bf"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Red_A_Normal.png",
+            "source_hash": "e4cc82c2ceed0656509d1f9cb17c05ed00eeef14",
+            "target_url": "./SubUSDs/textures/T_Plastic_Red_A_Normal.png",
+            "target_hash": "2c1ddd65429025c22ed5b00cd0437725534c6be9"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Yellow_A_ORM.png",
+            "source_hash": "591d0657c9aecd670bea85fd8d8703e065b00103",
+            "target_url": "./SubUSDs/textures/T_Plastic_Yellow_A_ORM.png",
+            "target_hash": "f64edc4f3b96886d199b8d3bef6be9cee83d4e14"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Rough_Black_A_ORM.png",
+            "source_hash": "d068fe64a034acf346795cf57c65102f13fc02fb",
+            "target_url": "./SubUSDs/textures/T_Plastic_Rough_Black_A_ORM.png",
+            "target_hash": "1bd724db9ac1e8653389f8c9448f79b75c8d2006"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Gray_A_ORM.png",
+            "source_hash": "0dc11941004842215591bbff9a0f637f0fbe769f",
+            "target_url": "./SubUSDs/textures/T_Plastic_Gray_A_ORM.png",
+            "target_hash": "e78c1a33a21c2ec9f9ed8a8bd37e12a13bbb1d39"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Blue_A_Normal.png",
+            "source_hash": "76fd6d7fbb87abe521ee6b7e966d852c2493cb6b",
+            "target_url": "./SubUSDs/textures/T_Plastic_Blue_A_Normal.png",
+            "target_hash": "49f4cea7eccb9189be5d7f3c135bf92dc4880b42"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Steel_A1_ORM.png",
+            "source_hash": "be0161986ce5f05fecb29a70ed3f72a9e97816a2",
+            "target_url": "./SubUSDs/textures/T_Steel_A1_ORM.png",
+            "target_hash": "83b4a6797384ac4c894bd24694255e9ddadfc54e"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Rubber/Textures/T_Rubber_Black_Rough_A_ORM.png",
+            "source_hash": "6abc44a5bec0889182c9036ee1d209a0b178966e",
+            "target_url": "./SubUSDs/textures/T_Rubber_Black_Rough_A_ORM.png",
+            "target_hash": "f06e16c1dbdaf3b5d6548c1d2bbf10e6ac161689"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Metal_Rough_A_ORM.png",
+            "source_hash": "21d4899e0dfda329f4146c001ffd62a81d5d5f15",
+            "target_url": "./SubUSDs/textures/T_Metal_Rough_A_ORM.png",
+            "target_hash": "49d7b055553940c77bb3664b7a9b0b4219f61141"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Red_A_ORM.png",
+            "source_hash": "75ce9a8f79fca2685cba1600bdb7a87ca91766f0",
+            "target_url": "./SubUSDs/textures/T_Plastic_Red_A_ORM.png",
+            "target_hash": "7be9e1fad884f5ec4f7597119c3059bc5ebe9076"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Yellow_A_Normal.png",
+            "source_hash": "4cd1e0704a61a28ede9ac8807e72a8998af83ad1",
+            "target_url": "./SubUSDs/textures/T_Plastic_Yellow_A_Normal.png",
+            "target_hash": "d5324cacccd5d00e1c3f999639256f16f5e8d221"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Plastic/Textures/T_Plastic_Gray_A_Normal.png",
+            "source_hash": "2bab88de89d2d59612ee947a3612fb5ea9932057",
+            "target_url": "./SubUSDs/textures/T_Plastic_Gray_A_Normal.png",
+            "target_hash": "ea0794ec35b1db488d7b07c9fee315f4bd5b4ff1"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Aluminium_Brushed_A1_Albedo.png",
+            "source_hash": "37f255408b7e4d84368ca2c2519daf5032f91e29",
+            "target_url": "./SubUSDs/textures/T_Aluminium_Brushed_A1_Albedo.png",
+            "target_hash": "a5425c30e4fa3693af7016c1bde386cef37dc5cc"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Aluminium_Brushed_A1_Normal.png",
+            "source_hash": "5f144df6cf6b25ab721abce6b4fe86a4b5ee0781",
+            "target_url": "./SubUSDs/textures/T_Aluminium_Brushed_A1_Normal.png",
+            "target_hash": "e7efe5db24edd0902a3674361aa1bfec4c67cdd2"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Props/Conveyors/Material Library/Metal/Textures/T_Aluminium_Brushed_A1_ORM.png",
+            "source_hash": "21ecb8c4556d9f2af141bbfcb36268481c8246b8",
+            "target_url": "./SubUSDs/textures/T_Aluminium_Brushed_A1_ORM.png",
+            "target_hash": "584bd1f150ab2004c0adf1ed97adf1f15917b8ff"
+        }
+    ]
+}
