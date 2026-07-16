@@ -8,4 +8,3 @@ __pycache__/
 *.onnx
 *.pt
 *.pth
-turtlebot3/
