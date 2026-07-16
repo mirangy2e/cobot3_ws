@@ -8,5 +8,4 @@ __pycache__/
 *.onnx
 *.pt
 *.pth
-Collected_*/
 turtlebot3/
