@@ -74,18 +74,18 @@ def generate_launch_description():
     return LaunchDescription(
         [
             # Declaring the Isaac Sim scene path. 'gui' launch argument is already used withing run_isaac_sim.launch.py
-            DeclareLaunchArgument("gui", default_value='https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Samples/ROS2/Scenario/carter_warehouse_navigation.usd', description="Path to isaac sim scene"),
+            DeclareLaunchArgument("gui", default_value='https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/Samples/ROS2/Scenario/carter_warehouse_navigation.usd', description="Path to isaac sim scene"),
 
             # Include Isaac Sim launch file from isaacsim package with given launch parameters.
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                            get_package_share_directory("isaacsim"), "launch", "run_isaacsim.launch.py"
+                            get_package_share_directory("isaacsim_bringup"), "launch", "run_isaacsim.launch.py"
                         ),
                     ]
                 ),
                 launch_arguments={
-                    'version': '5.1.0',
-                    'play_sim_on_start': 'true',
+                    'version': '6.0.1',
+                    'play_sim_on_start': 'True',
                 }.items(),
             ),
             
@@ -94,7 +94,7 @@ def generate_launch_description():
                 "params_file", default_value=param_dir, description="Full path to param file to load"
             ),
             DeclareLaunchArgument(
-                "use_sim_time", default_value="true", description="Use simulation (Omniverse Isaac Sim) clock if true"
+                "use_sim_time", default_value="True", description="Use simulation (Omniverse Isaac Sim) clock if True"
             ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(os.path.join(nav2_bringup_launch_dir, "rviz_launch.py")),

@@ -42,7 +42,7 @@ from m0609_pick_place_controller import PickPlaceController
 # ╔══════════════════════════════════════════════════════════════╗
 # ║  A. Task 파라미터 (이전 장과 동일)                              ║
 # ╚══════════════════════════════════════════════════════════════╝
-USD_PATH        = str(_THIS_DIR / "Collected_m0609_camera/m0609_camera.usd")
+USD_PATH        = str(_THIS_DIR / "Collected_m0609_camera_cube/m0609_camera_cube.usd")
 ROBOT_PRIM_PATH = "/World/m0609"
 EE_LINK_NAME    = "link_6"
 GRIPPER_JOINTS  = ["finger_joint", "right_inner_knuckle_joint"]

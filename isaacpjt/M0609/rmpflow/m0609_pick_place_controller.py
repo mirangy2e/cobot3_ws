@@ -34,7 +34,6 @@ class PickPlaceController(manipulators_controllers.PickPlaceController):
                 robot_description_path=robot_description_path,
                 rmpflow_config_path=rmpflow_config_path,
                 end_effector_frame_name=end_effector_frame_name,
-                
             ),
             gripper=gripper,
             end_effector_initial_height=end_effector_initial_height,

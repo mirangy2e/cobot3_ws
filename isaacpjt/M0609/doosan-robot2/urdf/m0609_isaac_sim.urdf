@@ -16,6 +16,7 @@
 					<mesh filename="/home/rokey/cobot3_ws/isaacpjt/M0609/doosan-robot2/urdf/meshes/m0609_collision/MF0609_0_0.dae" scale="0.001 0.001 0.001" />
 				</geometry>
 			</collision>
+			<visual>
 				<origin rpy="0 0 0" xyz="0 0 0" />
 				<geometry>
 					<mesh filename="/home/rokey/cobot3_ws/isaacpjt/M0609/doosan-robot2/urdf/meshes/m0609_white/MF0609_0_0.dae" scale="0.001 0.001 0.001" />

@@ -34,7 +34,7 @@ if str(_THIS_DIR) not in sys.path:
     sys.path.insert(0, str(_THIS_DIR))
 
 # USD
-USD_PATH        = str(_THIS_DIR / "Collected_m0609_camera/m0609_camera.usd")
+USD_PATH        = str(_THIS_DIR / "Collected_m0609_camera_cube/m0609_camera_cube.usd")
 ROBOT_PRIM_PATH = "/World/m0609"
 
 # 링크·관절
