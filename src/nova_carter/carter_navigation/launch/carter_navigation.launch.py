@@ -27,12 +27,6 @@ def generate_launch_description():
 
     use_sim_time = LaunchConfiguration("use_sim_time", default="True")
 
-    map_dir = LaunchConfiguration(
-        "map",
-        default=os.path.join(
-            get_package_share_directory("carter_navigation"), "maps", "carter_warehouse_navigation.yaml"
-        ),
-    )
 
     param_dir = LaunchConfiguration(
         "params_file",
@@ -41,6 +35,12 @@ def generate_launch_description():
         ),
     )
 
+    map_dir = LaunchConfiguration(
+        "map",
+        default=os.path.join(
+            get_package_share_directory("carter_navigation"), "maps", "carter_warehouse_navigation.yaml"
+        ),
+    )
 
     nav2_bringup_launch_dir = os.path.join(get_package_share_directory("nav2_bringup"), "launch")
 
@@ -53,7 +53,7 @@ def generate_launch_description():
                 "params_file", default_value=param_dir, description="Full path to param file to load"
             ),
             DeclareLaunchArgument(
-                "use_sim_time", default_value="True", description="Use simulation (Omniverse Isaac Sim) clock if True"
+                "use_sim_time", default_value="true", description="Use simulation (Omniverse Isaac Sim) clock if true"
             ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(os.path.join(nav2_bringup_launch_dir, "rviz_launch.py")),
@@ -82,7 +82,6 @@ def generate_launch_description():
                     'use_inf': True,
                     'inf_epsilon': 1.0,
                     # 'concurrency_level': 1,
-                    'use_sim_time': True,
                 }],
                 name='pointcloud_to_laserscan'
             )
