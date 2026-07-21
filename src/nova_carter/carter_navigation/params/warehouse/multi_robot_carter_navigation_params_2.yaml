@@ -43,8 +43,8 @@ amcl:
     always_reset_initial_pose: false
     first_map_only: false
     initial_pose:
-      x: -2.0
-      y: 5.0
+      x: -6.0
+      y: 2.0
       z: 0.0
       yaw: 3.14159
 
@@ -55,6 +55,7 @@ amcl_map_client:
 amcl_rclcpp_node:
   ros__parameters:
     use_sim_time: True
+
 bt_navigator:
   ros__parameters:
     use_sim_time: True
@@ -63,10 +64,6 @@ bt_navigator:
     odom_topic: chassis/odom
     bt_loop_duration: 20
     default_server_timeout: 40
-    # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
-    # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
-    # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
-    # They can be set here or via a RewrittenYaml remap from a parent launch file to Nav2.
     plugin_lib_names:
     - nav2_compute_path_to_pose_action_bt_node
     - nav2_compute_path_through_poses_action_bt_node
@@ -116,18 +113,15 @@ bt_navigator_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
-velocity_smoother: 
-  ros__parameters: 
-    smoothing_frequency: 20.0 
-    scale_velocities: false 
-    feedback: "OPEN_LOOP" 
-    max_velocity: [0.8, 0.0, 0.7] 
-    min_velocity: [-0.8, 0.0, -0.7] 
-    # deadband_velocity: [0.0, 0.0, 0.0] 
-    velocity_timeout: 1.0 
-    # max_accel: [1.0, 0.0, 1.25] 
-    # max_decel: [-1.0, 0.0, -1.25] 
-    odom_topic: "chassis/odom" 
+velocity_smoother:
+  ros__parameters:
+    smoothing_frequency: 20.0
+    scale_velocities: false
+    feedback: "OPEN_LOOP"
+    max_velocity: [0.8, 0.0, 0.7]
+    min_velocity: [-0.8, 0.0, -0.7]
+    velocity_timeout: 1.0
+    odom_topic: "chassis/odom"
     odom_duration: 0.1
 
 controller_server:
@@ -141,27 +135,23 @@ controller_server:
     progress_checker_plugin: "progress_checker"
     goal_checker_plugin: ["stopped_goal_checker"]
     controller_plugins: ["FollowPath"]
-
-    # Progress checker parameters
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.5
       movement_time_allowance: 10.0
-    # Goal checker parameters
     stopped_goal_checker:
       plugin: "nav2_controller::StoppedGoalChecker"
       xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.25
       stateful: True
-    # DWB parameters
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 1.8
+      max_vel_x: 0.8
       max_vel_y: 0.0
-      max_vel_theta: 1.2
+      max_vel_theta: 0.7
       min_speed_xy: 0.0
       max_speed_xy: 1.0
       min_speed_theta: 0.0
@@ -214,7 +204,6 @@ local_costmap:
       transform_tolerance: 0.3
       footprint: "[ [0.14, 0.25], [0.14, -0.25], [-0.607, -0.25], [-0.607, 0.25] ]"
       plugins: ["hesai_voxel_layer", "front_rplidar_obstacle_layer", "back_rplidar_obstacle_layer", "inflation_layer"]
-      # plugins: ["hesai_voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         enabled: True
@@ -231,8 +220,8 @@ local_costmap:
         z_resolution: 0.2
         unknown_threshold: 15
         observation_sources: pointcloud
-        pointcloud:  # no frame set, uses frame from message
-          topic: /carter3/front_3d_lidar/lidar_points
+        pointcloud:
+          topic: /carter2/front_3d_lidar/lidar_points
           max_obstacle_height: 2.0
           min_obstacle_height: 0.1
           obstacle_max_range: 10.0
@@ -247,7 +236,7 @@ local_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /carter3/front_2d_lidar/scan
+          topic: /carter2/front_2d_lidar/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -257,7 +246,7 @@ local_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /carter3/back_2d_lidar/scan
+          topic: /carter2/back_2d_lidar/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -269,8 +258,6 @@ local_costmap:
     ros__parameters:
       use_sim_time: True
 
-
-
 global_costmap:
   global_costmap:
     ros__parameters:
@@ -281,16 +268,14 @@ global_costmap:
       robot_base_frame: base_link
       use_sim_time: True
       footprint: "[ [0.14, 0.25], [0.14, -0.25], [-0.607, -0.25], [-0.607, 0.25] ]"
-
       resolution: 0.05
-
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
         observation_sources: scan
         scan:
-          topic: /carter3/scan
+          topic: /carter2/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -317,7 +302,7 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: True
-    yaml_filename: "carter_hospital_navigation.yaml"
+    yaml_filename: "carter_warehouse_navigation.yaml"
 
 map_saver:
   ros__parameters:
@@ -389,4 +374,3 @@ waypoint_follower:
       plugin: "nav2_waypoint_follower::WaitAtWaypoint"
       enabled: True
       waypoint_pause_duration: 200
-
