@@ -1,0 +1,62 @@
+# M0609 RRT planner config
+#   descriptor/m0609_rrt_config.yaml
+#
+#   Franka franka_planner_config.yaml 을 6-axis 로 축소한 것.
+#   변경점만 아래 주석으로 표시한다.
+
+# 고정 seed. 같은 입력이면 같은 경로가 나온다.
+#   경로가 매번 달라지는 것을 보여주려면 이 값을 바꿔 실행한다.
+seed: 123456
+
+# 트리 확장 1회 거리 (rad, c-space)
+#   충돌 검사도 이 간격으로 일어난다.
+#   얇은 장애물을 쓰려면 작아야 터널링이 없다.
+step_size: 0.02
+
+# YAML 상한. 코드에서 set_max_iterations() 로 덮어쓴다.
+max_iterations: 50000
+max_sampling: 10000
+
+# CHANGED: 7 -> 6 (M0609 6-axis)
+#   base 쪽 관절에 큰 가중치.
+#   큰 관절을 움직이는 것을 비싸게 취급해 손목 위주 해를 유도한다.
+distance_metric_weights: [3.0, 2.0, 2.0, 1.5, 1.0, 1.0]
+
+# CHANGED: panda_rightfingertip -> link_6
+#   task-space 판정에 쓰는 프레임. URDF 프레임명과 일치해야 한다.
+task_space_frame_name: "link_6"
+
+# CHANGED: M0609 는 base 중심 회전이라 x 음수 영역도 포함한다.
+#   SPEC_REACH=0.900, SHOULDER_Z=0.1345 기준으로 여유를 둔 값.
+#   PICK_XY [0.25, 0.10] / PLACE_XY [0.45, -0.10] 을 모두 포함한다.
+task_space_limits: [[-0.60, 0.70], [-0.60, 0.60], [0.00, 0.70]]
+
+cuda_tree_params:
+    max_num_nodes: 10000
+    max_buffer_size: 30
+    num_nodes_cpu_gpu_crossover: 3000
+
+# c-space 목표로 계획할 때 쓰는 항목.
+#   set_cspace_target() 경로에서는 이것만 관여한다.
+c_space_planning_params:
+    exploration_fraction: 0.5
+
+# task-space 목표로 계획할 때만 쓰는 항목.
+#   set_end_effector_target() 을 쓰지 않으면 무시된다.
+#   남겨 두는 이유: 나중에 A 방식으로 바꿀 때 그대로 쓰기 위함.
+task_space_planning_params:
+    translation_target_zone_tolerance: 0.05
+    orientation_target_zone_tolerance: 0.09
+    translation_target_final_tolerance: 1e-4
+    orientation_target_final_tolerance: 0.005
+    translation_gradient_weight: 1.0
+    orientation_gradient_weight: 0.125
+    nn_translation_distance_weight: 1.0
+    nn_orientation_distance_weight: 0.125
+    task_space_exploitation_fraction: 0.4
+    task_space_exploration_fraction: 0.1
+    max_extension_substeps_away_from_target: 6
+    max_extension_substeps_near_target: 50
+    extension_substep_target_region_scale_factor: 2.0
+    unexploited_nodes_culling_scalar: 1.0
+    gradient_substep_size: 0.025
