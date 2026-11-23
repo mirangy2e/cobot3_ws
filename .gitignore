@@ -10,3 +10,6 @@ __pycache__/
 turtlebot3/
 M0609_bak/
 carter_navigation_humble/
+# 강의 작업 중 생긴 로컬 파일
+_backup_before_notion_sync_*.tar.gz
+quiz.log

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="m0609_rg2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+ <xacro:arg name="m0609_urdf" default="m0609/urdf/m0609.urdf"/>
+ <xacro:arg name="tcp_offset_z" default="0.185"/>
+
+ <xacro:include filename="$(arg m0609_urdf)"/>
+
+ <xacro:include filename="rg2/urdf/onrobot_rg2ft_macro.xacro"/>
+ <xacro:onrobot_rg2ft
+     prefix=""
+     parent="link_6"
+     hw_interface="hardware_interface/PositionJointInterface">
+   <origin xyz="0 0 0" rpy="0 0 0"/>
+ </xacro:onrobot_rg2ft>
+
+ <link name="gripper_center"/>
+ <joint name="link_6-gripper_center" type="fixed">
+   <origin xyz="0 0 $(arg tcp_offset_z)" rpy="0 0 0"/>
+   <parent link="link_6"/>
+   <child link="gripper_center"/>
+ </joint>
+
+</robot>
