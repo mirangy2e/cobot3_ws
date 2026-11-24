@@ -10,7 +10,7 @@ simulation_app = SimulationApp({"headless": False})
 # ============================================================
 # 2. Isaac 모듈 import (앱을 켠 뒤에)
 # ============================================================
-from isaacsim.core.api import World  # TODO 1: SimulationApp 을 만든 뒤에 import
+from isaacsim.core.api import World  # SimulationApp 을 만든 뒤에 import
 
 world = World()
 print("World 생성 성공")
@@ -21,10 +21,10 @@ print("World 생성 성공")
 frame = 0
 while simulation_app.is_running():
     simulation_app.update()
-    frame += 1  # TODO 2
+    frame += 1  # 프레임 세기
     if frame % 60 == 0:
         print(f"{frame} 프레임")
-    if frame >= 300:  # TODO 3
+    if frame >= 300:  # 정해진 프레임 후 종료
         print("300 프레임이 지나 종료합니다")
         break
 

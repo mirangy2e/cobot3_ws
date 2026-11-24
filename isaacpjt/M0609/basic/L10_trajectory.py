@@ -159,11 +159,11 @@ if not success:
 
 # (마) 경로 만들기 (예제 값 기준으로 단계마다 만들어지는 것)
 
-# ① 시작 점과 끝 점 리스트 만듬
+# ① 직선 경로 계획: 시작 자세 -> 끝 자세 직선
 line = lula.create_task_space_path_spec(get_pose3(START_POS, rot_quat=DOWN_ORIENTATION))
 line.add_linear_path(get_pose3(END_POS, rot_quat=DOWN_ORIENTATION))
 
-# ② 시작 관절값(형상 유지를 위해) + 시작 점과 끝 점 관절값 
+# ② 묶음 경로 계획: 시작 관절값(팔 형태 유지) + ①
 path = lula.create_composite_path_spec(start_joints)
 path.add_task_space_path_spec(line, lula.CompositePathSpec.TransitionMode.SKIP)
 

@@ -34,7 +34,7 @@ def print_final_pose(pose_msg):
     ori = pose_msg.pose.orientation
     roll_rad, pitch_rad, yaw_rad = get_euler_from_quaternion(ori.x, ori.y, ori.z, ori.w)
     yaw_deg = math.degrees(yaw_rad)
-    
+
     print("-" * 50)
     print(f"📍 최종 위치: X = {pos.x:.3f} m, Y = {pos.y:.3f} m")
     print(f"🧭 최종 바라보는 방향 (Heading): {yaw_deg:.1f}°")
@@ -59,35 +59,35 @@ def create_pose(navigator, x, y, yaw_deg):
 def main():
     rclpy.init()
     nav = BasicNavigator()
-    
+
     # 1. 출발점 설정
     init_pose = create_pose(nav, -6.0, -1.0, 180.0)
     nav.setInitialPose(init_pose)
     nav.waitUntilNav2Active()
-    
+
     # 2. 경유지(Waypoints) 리스트 생성
     waypoints = []
-    
 
+    # 예시: 로봇이 'ㄷ'자 형태로 이동하도록 설정
     waypoints.append(create_pose(nav, 1.0, 0.0, 90.0))   # 경유지 1
     waypoints.append(create_pose(nav, 2.0, -1.0, 90.0))  # 경유지 2
     waypoints.append(create_pose(nav, 1.5, 1.0 , 90.0))  # 경유지 3 (최종 목적지)
-        
+
     # 3. Task 실행 (goToPose -> goThroughPoses로 변경)
     print("🚀 다중 경유지 주행을 시작합니다...")
     nav.goThroughPoses(waypoints)
-    
+
     last_pose = None
 
     while not nav.isTaskComplete():
         feedback = nav.getFeedback()
         if feedback:
             last_pose = feedback.current_pose
-            
+
             # 피드백에서 남은 총 거리와 남은 경유지 개수를 확인할 수 있습니다.
             print(f"남은 경유지 수: {feedback.number_of_poses_remaining} 개 | "
                   f"목적지까지 남은 총 거리: {feedback.distance_remaining:.2f} m")
-            
+
         time.sleep(1.0)
 
     # 4. 결과 처리
@@ -95,7 +95,7 @@ def main():
     if result == TaskResult.SUCCEEDED:
         print('\n🎉 모든 경유지를 거쳐 목적지에 도착 완료!')
         print_final_pose(last_pose)
-            
+
     elif result == TaskResult.CANCELED:
         print('\n⚠️ 주행이 취소되었습니다.')
     elif result == TaskResult.FAILED:

@@ -30,7 +30,7 @@ L11 RRT 로 장애물 피하기
 M0609/
 ├── robot/  props/        자산: 다운로드한 원본. 고치지 않는다
 ├── scenes/               장면: 자산을 참조 + 장면만의 것 (Action Graph, 조명, 배치)
-└── basic/  pick_place/   코드: 자산을 참조 (add_reference_to_stage)
+└── basic/  ros/          코드: 자산을 참조 (add_reference_to_stage)
 ```
 
 | 단계 | 방법 | 확인 |
@@ -46,12 +46,11 @@ M0609/
 - GUI 실습: `gui/GUI_Scene_Asset_Reference.md` (자산 참조로 작업 씬 만들기)
 
 ## 실습 (`isaacpjt/M0609/basic/`)
-한 폴더에 Lesson 마다 파일 5개가 있다. 예) L1
+한 폴더에 Lesson 마다 파일 4개가 있다. 예) L1
 | 파일 | 내용 |
 |---|---|
 | `L1_app_readme.md` | 학습 목표, 핵심 개념, 실행 방법, 실습, 연습 문제 (여기서 시작한다) |
 | `L1_app.py` | 예제 (실행하고 코드를 읽는다) |
-| `L1_app_quiz.py` | 연습 문제 (TODO 를 채우고 실행한다) |
 | `L1_app_answer.py` | 연습 문제 정답 코드 |
 | `L1_app_answer.md` | 정답 코드와 해설 |
 
@@ -63,7 +62,3 @@ isaac_python L1_app.py
 ```
 
 모든 Lesson 은 창 모드로 실행한다. 창을 닫으면 스크립트가 끝난다.
-
-## 더 보기: 완성본
-`isaacpjt/M0609/cube_pick_place/` 는 같은 pick and place 를 여러 파일(장면, 컨트롤러, 이동 방식, 설정 yaml)로 나눠 만든 완성본이다.
-L11 까지 끝낸 뒤, 실습에서 한 파일에 모아 만든 코드가 실제 프로젝트에서는 어떻게 나뉘는지 읽어 본다.

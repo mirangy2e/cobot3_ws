@@ -23,7 +23,7 @@ omni.kit.commands.execute("SetLightingMenuModeCommand", lighting_mode="Default")
 
 OFFSET = np.array([0.0, 0.0, 0.3])  # yellow 는 red 보다 0.3 m 위에
 
-# TODO 1: 기울어진 채 떨어지는 red, 그것을 따라 할 yellow
+# 기울어진 채 떨어지는 red, 그것을 따라 할 yellow
 red = world.scene.add(
     DynamicCone(
         prim_path="/World/Red", name="red", position=np.array([0.4, 0.0, 0.5]),
@@ -46,9 +46,9 @@ frame = 0
 while simulation_app.is_running():
     world.step(render=True)
     frame += 1
-    position, orientation = red.get_world_pose()  # TODO 2: red 의 위치, 자세를 읽어
+    position, orientation = red.get_world_pose()  # red 의 위치, 자세를 읽어
     yellow.set_world_pose(position=position + OFFSET, orientation=orientation)  # yellow 에 복사
-    if frame % 60 == 0:  # TODO 3
+    if frame % 60 == 0:  # 60 프레임마다 각도 출력
         angles = quat_to_euler_angles(orientation, degrees=True)
         print(f"{frame} 프레임 | red 위치 {np.round(position, 3)} | 각도(deg) {np.round(angles, 1)}")
 

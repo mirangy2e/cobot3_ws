@@ -27,7 +27,7 @@ SCENE_USD = Path(__file__).resolve().parents[1] / "scenes" / "pick_place_cube.us
 GRAPH_PATH = "/World/Graph/camera_graph"  # GUI 강의와 같은 위치
 CAMERA_PRIM = "/World/m0609_rg2_d455/angle_bracket/realsense_d455/RSD455/Camera_OmniVision_OV9782_Color"  # 손목 컬러 카메라
 WIDTH, HEIGHT = 640, 640  # 발행할 영상 크기 (픽셀)
-# WIDTH, HEIGHT = 320, 320 
+# WIDTH, HEIGHT = 320, 320  # 실습: 영상 크기 바꾸기
 FRAME_ID = "Camera"       # 메시지 header 의 frame_id
 CAMERA_LOOK_DEG = [0, 0, 90, 0, 90, 0]  # 카메라가 바닥의 큐브를 내려다보는 팔 자세 (joint_3, joint_5 = 90 deg)
 
@@ -78,7 +78,7 @@ og.Controller.edit(
             ("DepthPublish.inputs:type", "depth"),
             ("DepthPublish.inputs:topicName", "depth"),
             ("DepthPublish.inputs:frameId", FRAME_ID),
-            # ("DepthPublish.inputs:frameSkipCount", 1),
+            # ("DepthPublish.inputs:frameSkipCount", 1),  # 실습: /depth 를 2 프레임에 한 번 발행
         ],
     },
 )

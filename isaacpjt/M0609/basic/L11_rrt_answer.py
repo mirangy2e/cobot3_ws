@@ -106,7 +106,7 @@ PLACE_ABOVE_DEG = solve_ik(PLACE_ABOVE_POS)  # 놓을 위치 위 자세
 
 
 # ------------------------------------------------------------
-# (가-2) trajectory: 지금 관절값에서 TCP 목표까지 직선 -> 시간별 관절값 목록 (TODO 1)
+# (가-2) trajectory: 지금 관절값에서 TCP 목표까지 직선 -> 시간별 관절값 목록
 # ------------------------------------------------------------
 generator = LulaTaskSpaceTrajectoryGenerator(
     robot_description_path=DESCRIPTION_PATH,          # 로봇 설명 파일
@@ -141,7 +141,7 @@ def plan_line(start_joints, goal_position):
 
 
 # ------------------------------------------------------------
-# (가-3) RRT: 지금 관절값에서 목표 관절값까지 벽을 피하는 경로점 -> 시간별 관절값 목록 (TODO 1)
+# (가-3) RRT: 지금 관절값에서 목표 관절값까지 벽을 피하는 경로점 -> 시간별 관절값 목록
 # ------------------------------------------------------------
 rrt = RRT(
     robot_description_path=DESCRIPTION_PATH,          # 로봇 설명 파일 (충돌 검사용 구 포함)
@@ -341,7 +341,7 @@ class StepController(BaseController):
                 self._joint_list, self._velocity_list = plan_line(current_arm, value)
                 print(f"직선 | {name} | 관절값 {len(self._joint_list)} 개 ({len(self._joint_list) * DT:.2f} s)")
             if self._step_frames == 1 and kind == "rrt":
-                # (TODO 2) RRT 로 벽을 피하는 trajectory (목표는 deg -> rad)
+                # RRT 로 벽을 피하는 trajectory (목표는 deg -> rad)
                 self._joint_list, self._velocity_list, waypoints = plan_rrt(current_arm, np.radians(value))
                 print(f"RRT | {name} | 경로점 {len(waypoints)} 개 -> 관절값 {len(self._joint_list)} 개 ({len(self._joint_list) * DT:.2f} s)")
                 draw_path(self._joint_list)  # 계획 경로를 녹색 선으로

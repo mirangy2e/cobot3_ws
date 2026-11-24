@@ -13,9 +13,9 @@ simulation_app = SimulationApp({"headless": False})
 # ============================================================
 # 2. Isaac 모듈 import (앱을 켠 뒤에)
 # ============================================================
-import omni.kit.app
+from isaacsim.core.version import get_version
 
-print("Isaac Sim 버전:", omni.kit.app.get_app().get_build_version())
+print("Isaac Sim 버전:", get_version()[0])
 
 # ============================================================
 # 3. 메인 루프 (창이 열려 있는 동안 한 프레임씩 진행)

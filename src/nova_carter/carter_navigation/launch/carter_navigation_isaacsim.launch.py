@@ -74,17 +74,17 @@ def generate_launch_description():
     return LaunchDescription(
         [
             # Declaring the Isaac Sim scene path. 'gui' launch argument is already used withing run_isaac_sim.launch.py
-            DeclareLaunchArgument("gui", default_value='https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/Samples/ROS2/Scenario/carter_warehouse_navigation.usd', description="Path to isaac sim scene"),
+            DeclareLaunchArgument("gui", default_value='https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Samples/ROS2/Scenario/carter_warehouse_navigation.usd', description="Path to isaac sim scene"),
 
             # Include Isaac Sim launch file from isaacsim package with given launch parameters.
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                            get_package_share_directory("isaacsim_bringup"), "launch", "run_isaacsim.launch.py"
+                            get_package_share_directory("isaacsim"), "launch", "run_isaacsim.launch.py"
                         ),
                     ]
                 ),
                 launch_arguments={
-                    'version': '6.0.1',
+                    'version': '5.1.0',
                     'play_sim_on_start': 'True',
                 }.items(),
             ),

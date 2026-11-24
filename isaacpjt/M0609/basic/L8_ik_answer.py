@@ -58,7 +58,7 @@ GRIPPER_FRAMES = 60  # 그리퍼 단계는 이만큼 기다린 뒤 다음 단계
 
 
 # ------------------------------------------------------------
-# (가) IK: TCP 목표(위치 + 자세) -> 팔 관절 6개 각도 (TODO 1)
+# (가) IK: TCP 목표(위치 + 자세) -> 팔 관절 6개 각도
 # ------------------------------------------------------------
 ik_solver = LulaKinematicsSolver(
     robot_description_path=DESCRIPTION_PATH,          # 로봇 설명 파일
@@ -79,7 +79,7 @@ def solve_ik(position):
     return np.degrees(joints)                         # rad -> deg (ARM_JOINTS 순서)
 
 
-# 큐브 위치와 놓을 위치에서 자세 4개를 계산한다. L7 에서는 이 값을 미리 적어 두었다 (TODO 2)
+# 큐브 위치와 놓을 위치에서 자세 4개를 계산한다. L7 에서는 이 값을 미리 적어 두었다
 ABOVE_DEG = solve_ik(ABOVE_POS)              # 큐브 위 자세
 PICK_DEG = solve_ik(PICK_POS)                # 큐브를 집는 자세
 PLACE_ABOVE_DEG = solve_ik(PLACE_ABOVE_POS)  # 놓을 위치 위 자세

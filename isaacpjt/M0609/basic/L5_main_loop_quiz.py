@@ -1,4 +1,4 @@
-"""[L5 연습] Stop -> Play 해도 처음부터 다시 (문제는 L5_main_loop_readme.md 의 "연습 문제")
+"""[L5 연습] Stop -> Play 해도 처음부터 다시 (문제는 L5 강의 페이지의 "연습 문제")
 
 실행: isaac_python L5_main_loop_quiz.py
       창에서 Play 중에 Stop -> 다시 Play 를 눌러 보라

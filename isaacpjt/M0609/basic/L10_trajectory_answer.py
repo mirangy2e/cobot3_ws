@@ -98,7 +98,7 @@ PLACE_ABOVE_DEG = solve_ik(PLACE_ABOVE_POS)  # 놓을 위치 위 자세
 
 
 # ------------------------------------------------------------
-# (가-2) trajectory: 지금 관절값에서 TCP 목표까지 직선 -> 시간별 관절값 목록 (TODO 1)
+# (가-2) trajectory: 지금 관절값에서 TCP 목표까지 직선 -> 시간별 관절값 목록
 # ------------------------------------------------------------
 generator = LulaTaskSpaceTrajectoryGenerator(
     robot_description_path=DESCRIPTION_PATH,          # 로봇 설명 파일
@@ -276,7 +276,7 @@ class StepController(BaseController):
             )
             finished = np.max(np.abs(np.degrees(current_arm) - value)) < TOLERANCE_DEG  # 6개 모두 도착
         elif kind == "line":
-            # (TODO 2) 단계 첫 프레임: 지금 관절값에서 목표까지 직선 trajectory 를 만든다
+            # 단계 첫 프레임: 지금 관절값에서 목표까지 직선 trajectory 를 만든다
             if self._step_frames == 1:
                 self._joint_list, self._velocity_list = plan_line(current_arm, value)
                 print(f"직선 | {name} | 관절값 {len(self._joint_list)} 개 ({len(self._joint_list) * DT:.2f} s)")

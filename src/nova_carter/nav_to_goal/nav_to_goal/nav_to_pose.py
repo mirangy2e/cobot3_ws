@@ -45,15 +45,15 @@ def print_final_pose(pose_msg):
 
     pos = pose_msg.pose.position
     ori = pose_msg.pose.orientation
-    
+
     # 쿼터니언 -> 오일러 각도(라디안) 추출
     roll_rad, pitch_rad, yaw_rad = get_euler_from_quaternion(ori.x, ori.y, ori.z, ori.w)
-    
+
     # 라디안 -> 디그리(도) 변환
     roll_deg = math.degrees(roll_rad)
     pitch_deg = math.degrees(pitch_rad)
     yaw_deg = math.degrees(yaw_rad)
-    
+
     # 결과 출력
     print("-" * 50)
     print(f"📍 최종 위치: X = {pos.x:.3f} m, Y = {pos.y:.3f} m")
@@ -70,13 +70,13 @@ def create_pose(navigator, x, y, yaw_deg):
     pose = PoseStamped()
     pose.header.frame_id = 'map'
     pose.header.stamp = navigator.get_clock().now().to_msg()
-    
+
     pose.pose.position.x = float(x)
     pose.pose.position.y = float(y)
 
     yaw_rad = math.radians(yaw_deg)
     q = get_quaternion_from_euler(0, 0, yaw_rad)
-    
+
     pose.pose.orientation.x = q[0]
     pose.pose.orientation.y = q[1]
     pose.pose.orientation.z = q[2]
@@ -86,18 +86,18 @@ def create_pose(navigator, x, y, yaw_deg):
 def main():
     rclpy.init()
     nav = BasicNavigator()
-    
+
     # 1. 출발점 설정
     init_pose = create_pose(nav, -6.0, -1.0, 180.0)
     nav.setInitialPose(init_pose)
     nav.waitUntilNav2Active()
-    
+
     # 2. 목표 지점 설정
     goal_pose = create_pose(nav, -2.0, 2.0, 180.0)
-        
+
     # 3. Task 실행
     nav.goToPose(goal_pose)
-    
+
     last_pose = None
 
     while not nav.isTaskComplete():
@@ -105,16 +105,16 @@ def main():
         if feedback:
             last_pose = feedback.current_pose
             print(f"남은 거리: {feedback.distance_remaining:.2f} m")
-            
+
         time.sleep(1.0)
 
     # 4. 결과 처리
     result = nav.getResult()
     if result == TaskResult.SUCCEEDED:
         print('\n🎉 목적지 도착 완료!')
-        
+
         print_final_pose(last_pose)
-            
+
     elif result == TaskResult.CANCELED:
         print('주행 취소됨')
     elif result == TaskResult.FAILED:

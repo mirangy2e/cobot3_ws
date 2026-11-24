@@ -43,7 +43,7 @@ class CubeEnvTask(BaseTask):
         add_reference_to_stage(usd_path=str(ROBOT_USD), prim_path="/World/m0609_rg2_d455")
         self._robot = scene.add(SingleArticulation(prim_path="/World/m0609_rg2_d455", name="m0609"))
         self._task_objects[self._robot.name] = self._robot
-        self._cube = scene.add(  # TODO 1
+        self._cube = scene.add(  # 큐브 추가
             DynamicCuboid(prim_path="/World/Cube", name="cube", position=CUBE_POSITION,
                           scale=np.array([CUBE_SIZE] * 3), size=1.0, color=np.array([0, 0, 1.0]))
         )
@@ -60,7 +60,7 @@ class CubeEnvTask(BaseTask):
     # 언제: world.get_observations() 를 부를 때
     # 돌려줄 값: {물체 이름: {값 이름: 값}}
     def get_observations(self):
-        return {  # TODO 2
+        return {  # 큐브 위치도 관측값에 넣는다
             self._robot.name: {"joint_positions": self._robot.get_joint_positions()},
             self._cube.name: {"position": self._cube.get_world_pose()[0]},
         }
@@ -68,7 +68,7 @@ class CubeEnvTask(BaseTask):
     # 언제: 메인 루프가 물체 이름을 알아낼 때 (task.get_params())
     # 돌려줄 값: {파라미터 이름: {"value": 값}}
     def get_params(self):
-        return {"robot_name": {"value": self._robot.name}, "cube_name": {"value": self._cube.name}}  # TODO 2
+        return {"robot_name": {"value": self._robot.name}, "cube_name": {"value": self._cube.name}}  # 큐브 이름도 파라미터에 넣는다
 
 
 # ------------------------------------------------------------
@@ -84,7 +84,7 @@ class FaceCubeController(BaseController):
     # 언제: 매 프레임 메인 루프가 부른다
     # 받는 값: 큐브 위치 [x, y, z] (m) / 돌려줄 값: ArticulationAction
     def forward(self, cube_position):
-        # TODO 3
+        # 큐브 방향 계산
         # 1) 목표 각도: 로봇(원점)에서 본 큐브 방향
         facing = np.arctan2(cube_position[1], cube_position[0])
         # 2) 목표 자세: 홈 자세에서 joint_1 만 facing
@@ -104,7 +104,7 @@ task = CubeEnvTask(name="cube_env")
 world.add_task(task)
 world.reset()  # 여기서 task.set_up_scene() -> task.post_reset() 이 불린다
 
-# 물체 이름은 Task 에게 물어본다 (TODO 2 의 get_params)
+# 물체 이름은 Task 에게 물어본다 (get_params)
 params = task.get_params()
 robot_name = params["robot_name"]["value"]  # "m0609"
 cube_name = params["cube_name"]["value"]    # "cube": 관측값에서 큐브 위치를 꺼낼 때 쓴다

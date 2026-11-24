@@ -34,7 +34,7 @@ TOLERANCE_DEG = 1.0  # 팔 관절이 모두 목표와 이만큼 안으로 들어
 GRIPPER_FRAMES = 60  # 그리퍼 단계는 이만큼 기다린 뒤 다음 단계로 (60 프레임 = 1 초)
 PLACE_POSITION = np.array([0.318, -0.318, 0.02575])  # 큐브를 놓을 위치 (m). 로봇에서 거리는 큐브 처음 위치와 같은 0.45 m
 
-# 놓을 위치 자세: 집을 때 자세에서 joint_1 만 놓을 위치 방향으로 (TODO 1)
+# 놓을 위치 자세: 집을 때 자세에서 joint_1 만 놓을 위치 방향으로
 place_deg = np.degrees(np.arctan2(PLACE_POSITION[1], PLACE_POSITION[0]))  # 로봇(원점)에서 본 놓을 위치 방향 (deg)
 PLACE_ABOVE_DEG = [place_deg] + ABOVE_DEG[1:]
 PLACE_DEG = [place_deg] + PICK_DEG[1:]
@@ -47,7 +47,7 @@ STEPS = [
     ("내려가기", "arm", PICK_DEG),
     ("그리퍼 닫기", "gripper", "close"),
     ("들어 올리기", "arm", ABOVE_DEG),
-    ("옆으로 돌기", "arm", PLACE_ABOVE_DEG),  # TODO 2
+    ("옆으로 돌기", "arm", PLACE_ABOVE_DEG),  # 여기부터 추가한 단계: 옮기기 -> 놓기
     ("내려놓기", "arm", PLACE_DEG),
     ("그리퍼 열기", "gripper", "open"),
     ("올라가기", "arm", PLACE_ABOVE_DEG),
