@@ -23,7 +23,7 @@ from isaacsim.core.utils.stage import open_stage
 from isaacsim.core.utils.prims import is_prim_path_valid
 
 # --- Configuration -----------------------------------------------------------
-USD_PATH = "/home/rokey/cobot3_ws/isaacpjt/basic/Collected_Conveyor_split/conveyor_split.usd"
+USD_PATH = "/home/rokey/cobot3_ws/isaacpjt/deco/Collected_Conveyor_split/conveyor_split.usd"
 GRAPH_PATH = "/World/ConveyorTrack/Sorter/ActionGraph"
 SWITCH_ATTR = GRAPH_PATH + "/binary_switch.inputs:value"
 CUBE_PATH = "/World/Cube"

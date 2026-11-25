@@ -11,7 +11,7 @@ import omni.usd
 from isaacsim.core.api import World
 from isaacsim.core.utils.stage import open_stage
 
-USD_PATH = "/home/rokey/cobot3_ws/isaacpjt/basic/Collected_Conveyor_split/conveyor_split.usd"
+USD_PATH = "/home/rokey/cobot3_ws/isaacpjt/deco/Collected_Conveyor_split/conveyor_split.usd"
 GRAPH_PATH = "/World/ConveyorTrack/Sorter/ActionGraph"
 
 open_stage(usd_path=USD_PATH)

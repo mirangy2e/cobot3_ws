@@ -2,7 +2,7 @@ isaacsim.replicator.agent:
   version: 0.7.0
   character:
     asset_path: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/People/Characters/
-    command_file: /home/rokey/cobot3_ws/isaacpjt/basic/people/command.txt
+    command_file: /home/rokey/cobot3_ws/isaacpjt/deco/people/command.txt
     filters:
     - business
     - female
@@ -44,14 +44,14 @@ isaacsim.replicator.agent:
   response:
     response_list: []
   robot:
-    command_file: /home/rokey/cobot3_ws/isaacpjt/basic/people/robot_command.txt
+    command_file: /home/rokey/cobot3_ws/isaacpjt/deco/people/robot_command.txt
     iw_hub_num: 0
     navigation_area: []
     nova_carter_num: 0
     spawn_area: []
     write_data: false
   scene:
-    asset_path: /home/rokey/cobot3_ws/isaacpjt/basic/people/my_navmap.usd
+    asset_path: /home/rokey/cobot3_ws/isaacpjt/deco/people/my_navmap.usd
   sensor:
     camera_num: 4
   event:
